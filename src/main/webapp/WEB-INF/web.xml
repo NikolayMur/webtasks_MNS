@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+
+	<display-name>Webtasks demo application</display-name>
+
+	<context-param>
+		<param-name>developer</param-name>
+		<param-value>nata</param-value>
+	</context-param>
+
+	<!-- Listeners -->
+	<listener>
+		<listener-class>listeners.WebtasksContextListener
+		</listener-class>
+	</listener>
+
+	<listener>
+		<listener-class>listeners.WebtasksSessionListener
+		</listener-class>
+	</listener>
+
+
+
+	<!--                     Servlets                            -->
+
+	<!-- Marks -->
+	<servlet>
+		<servlet-name>MarksListController</servlet-name>
+		<servlet-class>controllers.MarksListController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MarksListController</servlet-name>
+		<url-pattern>/mark/marksList.php</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>MarksListController</servlet-name>
+		<url-pattern>/admin/marksList.php</url-pattern>
+	</servlet-mapping>
+
+	<!-- Terms -->
+	<servlet>
+		<servlet-name>TermsListController</servlet-name>
+		<servlet-class>controllers.TermsListController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TermsListController</servlet-name>
+		<url-pattern>/term/termsList.php</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>TermsListController</servlet-name>
+		<url-pattern>/admin/termsList.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TermDeleteController</servlet-name>
+		<servlet-class>controllers.TermDeleteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TermDeleteController</servlet-name>
+		<url-pattern>/admin/termDelete.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TermsCreatingController</servlet-name>
+		<servlet-class>controllers.TermsCreatingController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TermsCreatingController</servlet-name>
+		<url-pattern>/admin/termCreating.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>TermsModifyingController</servlet-name>
+		<servlet-class>controllers.TermsModifyingController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>TermsModifyingController</servlet-name>
+		<url-pattern>/admin/termModifying.php</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Students -->
+	<servlet>
+		<servlet-name>StudentsListController</servlet-name>
+		<servlet-class>controllers.StudentsListController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentsListController</servlet-name>
+		<url-pattern>/student/studentsList.php</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>StudentsListController</servlet-name>
+		<url-pattern>/admin/studentsList.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StudentsCreatingController</servlet-name>
+		<servlet-class>controllers.StudentsCreatingController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentsCreatingController</servlet-name>
+		<url-pattern>/admin/studentsCreating.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StudentsModifyingController</servlet-name>
+		<servlet-class>controllers.StudentsModifyingController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentsModifyingController</servlet-name>
+		<url-pattern>/admin/studentsModifying.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>StudentsDeleteController</servlet-name>
+		<servlet-class>controllers.StudentsDeleteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>StudentsDeleteController</servlet-name>
+		<url-pattern>/admin/studentsDelete.php</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Disciplines -->
+	<servlet>
+		<servlet-name>DisciplinesListController</servlet-name>
+		<servlet-class>controllers.DisciplinesListController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisciplinesListController</servlet-name>
+		<url-pattern>/student/disciplinesList.php</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>DisciplinesListController</servlet-name>
+		<url-pattern>/admin/disciplinesList.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DisciplineDeleteController</servlet-name>
+		<servlet-class>controllers.DisciplineDeleteController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisciplineDeleteController</servlet-name>
+		<url-pattern>/admin/disciplineDelete.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DisciplinesCreatingController</servlet-name>
+		<servlet-class>controllers.DisciplinesCreatingController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisciplinesCreatingController</servlet-name>
+		<url-pattern>/admin/disciplinesCreating.php</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>DisciplinesModifyingController</servlet-name>
+		<servlet-class>controllers.DisciplinesModifyingController</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>DisciplinesModifyingController</servlet-name>
+		<url-pattern>/admin/disciplinesModifying.php</url-pattern>
+	</servlet-mapping>
+
+	<!--Login-->
+	<servlet>
+		<servlet-name>LoginController</servlet-name>
+		<servlet-class>controllers.LoginController
+        </servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>LoginController</servlet-name>
+		<url-pattern>/login.php</url-pattern>
+	</servlet-mapping>
+
+    <servlet>
+        <servlet-name>LogoutController</servlet-name>
+        <servlet-class>controllers.LogoutController
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogoutController</servlet-name>
+        <url-pattern>/logout.php</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>HomePageController</servlet-name>
+        <servlet-class>controllers.HomePageController
+        </servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomePageController</servlet-name>
+        <url-pattern>/student/home.php</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>HomePageController</servlet-name>
+        <url-pattern>/admin/home.php</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+		<servlet-name>ErrorController</servlet-name>
+		<servlet-class>controllers.ErrorController
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ErrorController</servlet-name>
+		<url-pattern>/error.php</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>ErrorController</servlet-name>
+		<url-pattern>/pageNotFound.php</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Filters -->
+
+
+	<filter>
+		<filter-name>WebtasksCharsetFilter</filter-name>
+		<filter-class>filters.WebtasksCharsetFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>WebtasksCharsetFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/pageNotFound.php</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/error.php</location>
+	</error-page>
+
+	<error-page>
+		<exception-type>java.lang.Exception</exception-type>
+		<location>/error.php</location>
+	</error-page>
+
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+
+</web-app>
